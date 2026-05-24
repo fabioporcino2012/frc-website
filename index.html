@@ -849,17 +849,27 @@ footer{background:var(--navy-3);border-top:1px solid rgba(255,255,255,.08);paddi
 </div>
 
 <script>
-const A = './frc-assets/';
 const imgs = {
-  logo: A+'logo.png', hero: A+'hero.png',
-  story: A+'entrega-chave.png',
-  familia: A+'familia.png', avoNetos: A+'avo-netos.png', casal: A+'casal-chave.png',
-  corolla: A+'car-corolla.png', santaFe: A+'car-santa-fe.png',
-  highlander: A+'car-highlander.png', pacifica: A+'car-pacifica.png',
-  suburban: A+'car-suburban.png', escalade: A+'car-escalade.png'
+  hero:       'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194329_b912f50a-084d-424c-bfd9-05fdbf038f44.png',
+  story:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
+  familia:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194345_b75882a0-4f80-4428-b513-f2ee53e30de3.png',
+  avoNetos:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
+  casal:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194329_b912f50a-084d-424c-bfd9-05fdbf038f44.png',
+  corolla:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194333_69909458-bcfb-45b3-a548-15b6927b6d49.png',
+  santaFe:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194337_f26644f8-4bef-41c8-b003-28d68d46d459.png',
+  highlander: 'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
+  pacifica:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194345_b75882a0-4f80-4428-b513-f2ee53e30de3.png',
+  suburban:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194348_aff8d297-c321-4746-96fb-4b3b00a3b8b4.png',
+  escalade:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194352_a9f92d81-888b-494a-866a-9fe4a1ca2d86.png'
 };
-document.getElementById('navLogo').src = imgs.logo;
-document.getElementById('footerLogo').src = imgs.logo;
+// Logo texto (substitui img por span estilizado)
+['navLogo','footerLogo'].forEach(id=>{
+  const el=document.getElementById(id);
+  const s=document.createElement('span');
+  s.style.cssText='font-family:"Barlow Condensed",Arial Narrow,sans-serif;font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;line-height:1';
+  s.innerHTML='FLORIDA <span style="color:#C90000">RENTAL CAR</span>';
+  el.replaceWith(s);
+});
 document.getElementById('heroBg').style.backgroundImage = `url('${imgs.hero}')`;
 document.getElementById('storyImg').src = imgs.story;
 document.getElementById('gallImg1').src = imgs.familia;
