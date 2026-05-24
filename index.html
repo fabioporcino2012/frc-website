@@ -851,16 +851,21 @@ footer{background:var(--navy-3);border-top:1px solid rgba(255,255,255,.08);paddi
 <script>
 const imgs = {
   hero:       'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194329_b912f50a-084d-424c-bfd9-05fdbf038f44.png',
-  story:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
+  story:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200444_a15abcd5-3992-4a48-9bb3-5253d2c72dc3.png',
   familia:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194345_b75882a0-4f80-4428-b513-f2ee53e30de3.png',
   avoNetos:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
-  casal:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194329_b912f50a-084d-424c-bfd9-05fdbf038f44.png',
+  casal:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200449_44c9f0af-7700-40df-ab33-bc05e4021163.png',
   corolla:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194333_69909458-bcfb-45b3-a548-15b6927b6d49.png',
   santaFe:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194337_f26644f8-4bef-41c8-b003-28d68d46d459.png',
-  highlander: 'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194928_6cd4cb29-3951-4ac4-882e-55b52c41a55b.png',
+  highlander: 'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200511_ec110e19-8a25-4456-a9d1-a6058ca058ac.png',
   pacifica:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194345_b75882a0-4f80-4428-b513-f2ee53e30de3.png',
   suburban:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194348_aff8d297-c321-4746-96fb-4b3b00a3b8b4.png',
-  escalade:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194352_a9f92d81-888b-494a-866a-9fe4a1ca2d86.png'
+  escalade:   'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_194352_a9f92d81-888b-494a-866a-9fe4a1ca2d86.png',
+  tesla:      'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200452_61564b09-2ce1-4308-88c6-e383cc32871a.png',
+  cybertruck: 'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200456_90448656-861b-449b-a98b-8d10d0f62ff2.png',
+  mustang:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200501_27b2aa90-8f9c-4cd9-836d-ffb5cd43de12.png',
+  f150:       'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200504_c22b1c4a-8498-4745-941c-70d395ff56e5.png',
+  transit:    'https://d8j0ntlcm91z4.cloudfront.net/user_3CaZD2MoNFBWmuIIgdZWPUXVwjn/hf_20260524_200507_1937d688-1203-47b6-b3d0-fa0b01de8468.png',
 };
 // Logo texto (substitui img por span estilizado)
 ['navLogo','footerLogo'].forEach(id=>{
@@ -889,14 +894,14 @@ const fleet = [
   {cat:'luxo', name:'SUV Premium 8L', sub:'Chevrolet Suburban ou similar', seats:8, lug:6, price:'$89', badge:'Premium', img:imgs.suburban},
   {cat:'luxo', name:'SUV Elite 8L', sub:'Ford Expedition ou similar', seats:8, lug:6, price:'$99', badge:'Elite 8L', img:imgs.suburban},
   {cat:'luxo', name:'Cadillac Escalade', sub:'Cadillac Escalade 2024', seats:8, lug:4, price:'$149', badge:'Ultra Premium', img:imgs.escalade},
-  {cat:'eletrico', name:'Tesla Model 3', sub:'Tesla Model 3 2024', seats:5, lug:2, price:'$69', badge:'Elétrico', img:imgs.corolla},
-  {cat:'eletrico', name:'Tesla Model Y', sub:'Tesla Model Y 2024', seats:5, lug:3, price:'$79', badge:'Elétrico SUV', img:imgs.santaFe},
-  {cat:'eletrico', name:'Mustang Mach-E', sub:'Ford Mustang Elétrico 2024', seats:5, lug:3, price:'$85', badge:'Elétrico', img:imgs.santaFe},
-  {cat:'eletrico', name:'Tesla Cybertruck', sub:'Tesla Cybertruck 2024', seats:5, lug:6, price:'$135', badge:'Único', img:imgs.suburban},
-  {cat:'especial', name:'Mustang', sub:'Ford Mustang 2024', seats:4, lug:1, price:'$95', badge:'Esportivo', img:imgs.corolla},
-  {cat:'especial', name:'Conversível', sub:'Camaro Convertible ou similar', seats:4, lug:1, price:'$110', badge:'Especial', img:imgs.corolla},
-  {cat:'especial', name:'Caminhonete', sub:'Ford F-150 ou similar', seats:5, lug:6, price:'$99', badge:'Pickup', img:imgs.suburban},
-  {cat:'especial', name:'Van 12 Lugares', sub:'Ford Transit ou similar', seats:12, lug:8, price:'$120', badge:'Grupo', img:imgs.pacifica},
+  {cat:'eletrico', name:'Tesla Model 3', sub:'Tesla Model 3 2024', seats:5, lug:2, price:'$69', badge:'Elétrico', img:imgs.tesla},
+  {cat:'eletrico', name:'Tesla Model Y', sub:'Tesla Model Y 2024', seats:5, lug:3, price:'$79', badge:'Elétrico SUV', img:imgs.tesla},
+  {cat:'eletrico', name:'Mustang Mach-E', sub:'Ford Mustang Elétrico 2024', seats:5, lug:3, price:'$85', badge:'Elétrico', img:imgs.tesla},
+  {cat:'eletrico', name:'Tesla Cybertruck', sub:'Tesla Cybertruck 2024', seats:5, lug:6, price:'$135', badge:'Único', img:imgs.cybertruck},
+  {cat:'especial', name:'Mustang', sub:'Ford Mustang 2024', seats:4, lug:1, price:'$95', badge:'Esportivo', img:imgs.mustang},
+  {cat:'especial', name:'Conversível', sub:'Camaro Convertible ou similar', seats:4, lug:1, price:'$110', badge:'Especial', img:imgs.mustang},
+  {cat:'especial', name:'Caminhonete', sub:'Ford F-150 ou similar', seats:5, lug:6, price:'$99', badge:'Pickup', img:imgs.f150},
+  {cat:'especial', name:'Van 12 Lugares', sub:'Ford Transit ou similar', seats:12, lug:8, price:'$120', badge:'Grupo', img:imgs.transit},
 ];
 
 const grid = document.getElementById('fleetGrid');
